@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Picture puzzle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="./js/jquery.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="head">
+        <h1 style="text-align: center;font-size: 40px;letter-spacing: 25px;color: #414242;">鑫了个鑫</h1>
+        <div class="co-title">不看广告，看疗效!</div>
+    </div>
+    <div id="scorepanel">
+        <h2 class="mt-6 font-16">记分板</h2>
+        <div class="mt-6" style="margin: 10px 0;font-weight: 900;">
+            <span>关卡：</span>
+            <span id="level"></span>
+        </div>
+        <div class="mt-6" style="margin: 10px 0;font-weight: 900;">
+            <span>用时：</span>
+            <span id="time" style="color: white;"></span>
+        </div>
+        <div class="buttons">
+            <button id="start">开始</button>
+            <button id="pause">暂停</button>
+            <button id="restart">重新开始</button>
+            <button id="helper">打乱顺序</button>
+        </div>
+    </div>
+    <div class="box">
+    </div>
+    <div class="child-center">
+        <div id="card-container" class="card-container"></div>
+    </div>
+    <div id="pausepanel" style="display: none;">
+        <div style="margin: auto;width: 100%;">
+            <h1 style="background-color: #eee;height: 73px;font-size: 50px;user-select: none;">暂停</h1>
+            <span id="continue" style="background-color: #fff; padding: 7px 67px; border-radius: 50px;user-select: none;cursor: pointer;">点我继续</span>
+        </div>
+    </div>
+</body>
+</html>
