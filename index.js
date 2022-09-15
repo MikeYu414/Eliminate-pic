@@ -114,6 +114,7 @@ class Game {
    EachLevelNum = 15
    LoseTip = "你输了\n点击确定从头再来吧~~"
    WinTip = "胜利!!!\n点击确定进入下一关~~"
+   ImageNum = 21
    Ready = 0
    Win = 1
    Processing = 2
@@ -133,9 +134,10 @@ class Game {
       var imgs = [];
       while (imgs.length < cardNum) {
          for (let index = 0; index < total; index++) {
-            imgs.push(`img/${index}.jpeg`)
-            imgs.push(`img/${index}.jpeg`)
-            imgs.push(`img/${index}.jpeg`)
+            var tempIndex = index % this.ImageNum;
+            imgs.push(`img/${tempIndex}.jpeg`)
+            imgs.push(`img/${tempIndex}.jpeg`)
+            imgs.push(`img/${tempIndex}.jpeg`)
             if (imgs.length == cardNum) {
                break;
             }
@@ -397,7 +399,7 @@ $(function() {
       let tip = "鑫哥NB";
       var res = prompt("请输入暗号:",tip);
       if (res == tip) {
-         game.randomOrder();
+         alert("说啥都没用了!");
       }
       else{
          alert("说别的没用!!");
